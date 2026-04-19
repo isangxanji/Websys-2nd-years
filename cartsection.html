@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEase - Cart</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">ShopEase</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="shopsection.html">Shop</a></li>
+        <li><a href="clothingsection.html">Clothing</a></li>
+        <li><a href="electronicsection.html">Electronics</a></li>
+        <!--<li><a href="shopsection.html">Sale</a></li>-->
+        <li><a href="homepage.html">My Account</a></li>
+      </ul>
+    </nav>
+    <div class="icons">
+      <span>🔍</span>
+      <span>🛒</span>
+    </div>
+  </header>
+
+  <!-- Cart Section -->
+  <main class="cart-page">
+    <h1>Your Shopping Cart</h1>
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sport Sneakers</td>
+          <td>$89.99</td>
+          <td><input type="number" value="1" min="1"></td>
+          <td>$89.99</td>
+        </tr>
+        <tr>
+          <td>Smartwatch</td>
+          <td>$149.99</td>
+          <td><input type="number" value="1" min="1"></td>
+          <td>$149.99</td>
+        </tr>
+        <tr>
+          <td>Cozy Sweater <span class="old-price">$45.00</span></td>
+          <td>$36.00</td>
+          <td><input type="number" value="1" min="1"></td>
+          <td>$36.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="cart-actions">
+      <button class="update-btn">Update Cart</button>
+      <div class="coupon">
+        <input type="text" placeholder="Enter your coupon code">
+        <button>Apply Coupon</button>
+      </div>
+    </div>
+
+    <!-- Cart Summary -->
+    <aside class="cart-summary">
+      <h2>Cart Summary</h2>
+      <p>Subtotal: $275.98</p>
+      <p>Discount: -$9.00</p>
+      <p><strong>Total: $266.98</strong></p>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </aside>
+
+    <!-- Recommendations -->
+    <section class="recommendations">
+      <h2>You May Also Like</h2>
+      <div class="recommend-grid">
+        <div class="recommend-item">Digital Camera - $299.00 <button>Add to Cart</button></div>
+        <div class="recommend-item">Casual Backpack - $54.00 <button>Add to Cart</button></div>
+        <div class="recommend-item">Stylish Sunglasses - $35.00 <button>Add to Cart</button></div>
+        <div class="recommend-item">Wireless Headphones - $79.00 <button>Add to Cart</button></div>
+      </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="promo-banner">
+      <h2>Save $100 on 4K Smart TVs</h2>
+      <p>Upgrade your entertainment experience</p>
+      <button>Shop Now</button>
+    </section>
+  </main>
+</body>
+</html>

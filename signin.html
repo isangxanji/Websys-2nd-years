@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEase - Create Account</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">ShopEase</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Clothing</a></li>
+        <li><a href="#">Electronics</a></li>
+        <!--<li><a href="shopsection.html">Sale</a></li>-->
+        <li><a href="login.html">Log In</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="signup-container">
+    <form class="signup-box" action ="homepage.html">
+
+      <h2>Create Your Account</h2>
+
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your full name" required />
+
+      <label>Email Address</label>
+      <input type="email" placeholder="Enter your email" required />
+
+      <label>Password</label>
+      <input type="password" placeholder="Enter your password" required />
+
+      <label>Confirm Password</label>
+      <input type="password" placeholder="Confirm your password" required />
+
+      <div class="remember">
+        <input type="checkbox" id="remember" />
+        <label for="remember">Remember Me</label>
+      </div>
+
+      <button type="submit">Register</button>
+
+      <p class="terms">
+        By signing up, you agree to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.
+      </p>
+
+      <p class="login-link">
+        Already have an account? <a href="login.html">Log in ›</a>
+      </p>
+    </form>
+  </main>
+</body>
+</html>
