@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Center | Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --success: #27ae60;
+            --bg: #f4f7f6;
+            --white: #ffffff;
+            --text: #333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg); color: var(--text); }
+
+        /* Navigation */
+        nav { background: var(--primary); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
+
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+
+        /* Section Cards */
+        .card { background: var(--white); padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        h2 { margin-bottom: 20px; color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        
+        /* Forms */
+        .grid-form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .full-width { grid-column: span 2; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 0.9rem; }
+        input, select, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; outline: none; }
+        input:focus { border-color: var(--accent); }
+        .required { color: #e74c3c; }
+
+        /* Buttons */
+        .btn { padding: 12px 25px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+        .btn-primary { background: var(--accent); color: white; width: 100%; }
+        .btn-success { background: var(--success); color: white; width: 100%; }
+        .btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+        /* Hidden Sections */
+        #listingSection { display: none; }
+
+        /* File Upload Styling */
+        .file-box { border: 2px dashed #ddd; padding: 20px; text-align: center; border-radius: 8px; cursor: pointer; }
+        .file-box:hover { background: #f9f9f9; border-color: var(--accent); }
+    </style>
+</head>
+<body>
+<!--
+<nav>
+    <div class="logo"><i class="fas fa-store-alt"></i> WEBSYS SELLER CENTER</div>
+    <div class="nav-links">
+        <a href="homepage.html">Marketplace Home</a>
+        <a href="signin.html">Log Out</a>
+    </div>
+</nav>-->
+
+ <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">ShopEase</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="shopsection.html">Shop</a></li>
+        <li><a href="clothingsection.html">Clothing</a></li>
+        <li><a href="electronicsection.html">Electronics</a></li>
+        <li><a href="MyAccount.html">My Account</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<div class="container">
+    
+    <section id="onboardingSection">
+        <div class="card">
+            <h2><i class="fas fa-id-card"></i> 1. Seller Registration</h2>
+            <form id="registrationForm">
+                <div class="grid-form">
+                    <div class="form-group">
+                        <label>Full Name <span class="required">*</span></label>
+                        <input type="text" placeholder="Juan Dela Cruz" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Business Email <span class="required">*</span></label>
+                        <input type="email" placeholder="shop@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Shop Name <span class="required">*</span></label>
+                        <input type="text" placeholder="e.g. Manila Tech Threads" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Warehouse Address <span class="required">*</span></label>
+                        <input type="text" placeholder="City, Province" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Bank Name</label>
+                        <select>
+                            <option>BDO</option>
+                            <option>BPI</option>
+                            <option>GCash / Maya</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Account Number</label>
+                        <input type="text" placeholder="0000-0000-00">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Shop Description</label>
+                        <textarea rows="3" placeholder="Tell buyers about your shop..."></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Verification Document (BIR 2303 / ID)</label>
+                        <div class="file-box">
+                            <i class="fas fa-cloud-upload-alt"></i> Click to upload document
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Complete Onboarding & Start Selling</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="listingSection">
+        <div class="card">
+            <h2><i class="fas fa-plus-circle"></i> 2. Create New Listing</h2>
+            <form id="productForm">
+                <div class="grid-form">
+                    <div class="form-group full-width">
+                        <label>Product Title <span class="required">*</span></label>
+                        <input type="text" placeholder="e.g. Brand New Gaming Laptop RTX 4060" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Category <span class="required">*</span></label>
+                        <select required>
+                            <option value="electronics">Electronics (Link to electronicsection.html)</option>
+                            <option value="clothing">Clothing (Link to clothingsection.html)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>SKU (Stock Keeping Unit)</label>
+                        <input type="text" placeholder="AUTO-GEN-123">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Price (₱) <span class="required">*</span></label>
+                        <input type="number" placeholder="0.00" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Stock Level <span class="required">*</span></label>
+                        <input type="number" placeholder="1" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Product Description <span class="required">*</span></label>
+                        <textarea rows="4" placeholder="Features, materials, specs..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Parcel Weight (kg)</label>
+                        <input type="number" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label>Variations</label>
+                        <input type="text" placeholder="e.g. S, M, L or Blue, Red">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Product Photos</label>
+                        <div class="file-box">
+                            <i class="fas fa-images"></i> Upload up to 8 photos
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success">Publish Product to Marketplace</button>
+                <p style="text-align: center; margin-top: 15px; font-size: 0.8rem; color: #666;">
+                    By publishing, you agree to the Seller Terms and Conditions.
+                </p>
+            </form>
+        </div>
+    </section>
+
+</div>
+
+<script>
+    const registrationForm = document.getElementById('registrationForm');
+    const onboarding = document.getElementById('onboardingSection');
+    const listing = document.getElementById('listingSection');
+
+    // Handle Onboarding Completion
+    registrationForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert("Registration Successful! Welcome to the marketplace.");
+        
+        // Hide Onboarding, Show Listing Form
+        onboarding.style.display = 'none';
+        listing.style.display = 'block';
+        window.scrollTo(0,0);
+    });
+
+    // Handle Product Posting
+    document.getElementById('productForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert("Product has been listed! It will now appear in your shop sections.");
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
