@@ -18,10 +18,44 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: var(--bg); color: var(--text); }
 
-        /* Navigation */
+        /* Navigation */ 
+        body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+        /*
         nav { background: var(--primary); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.5rem; font-weight: bold; }
-        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-size: 0.9rem; }*/
 
         .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
 
@@ -62,7 +96,7 @@
     </div>
 </nav>-->
 
- <!-- Navigation -->
+ <!-- Navigation 
   <header class="navbar">
     <div class="logo">ShopEase</div>
     <nav>
@@ -71,6 +105,22 @@
         <li><a href="shopsection.html">Shop</a></li>
         <li><a href="clothingsection.html">Clothing</a></li>
         <li><a href="electronicsection.html">Electronics</a></li>
+        <li><a href="MyAccount.html">My Account</a></li>
+      </ul>
+    </nav>
+  </header>-->
+
+   <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">ShopEase</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="shopsection.html">Shop</a></li>
+        <li><a href="clothingsection.html">Clothing</a></li>
+        <li><a href="electronicsection.html">Electronics</a></li>
+        <!--<li><a href="shopsection.html">Sale</a></li>-->
+        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
         <li><a href="MyAccount.html">My Account</a></li>
       </ul>
     </nav>
