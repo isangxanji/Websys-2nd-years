@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEase - Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+ <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">ShopEase</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="homepage.php">Home</a></li>
+        <li><a href="shopsection.php">Shop</a></li>
+        <li><a href="clothingsection.php">Clothing</a></li>
+        <li><a href="electronicsection.php">Electronics</a></li>
+        <!--<li><a href="shopsection.html">Sale</a></li>-->
+        <li><a href="cart.php"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+        <li><a href="MyAccount.hphptml">My Account</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="login-container">
+    <form class="login-box" action="homepage.php" >
+      <h2>Welcome Back!</h2>
+      <label>Email Address</label>
+      <input type="email" placeholder="Enter your email"  />required
+      <label>Password</label>
+      <input type="password" placeholder="Enter your password"  />required
+      <div class="remember">
+        <input type="checkbox" id="remember" />
+        <label for="remember">Remember Me</label>
+      </div>
+      <button type="submit">Log in</button>
+      <div class="links">
+        <a href="#">Forgot Password?</a>
+        <a href="signin.php">Sign Up ></a>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

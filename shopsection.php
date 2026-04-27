@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEase - Shop All Products</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+ <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">ShopEase</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="homepage.php">Home</a></li>
+        <li><a href="shopsection.php">Shop</a></li>
+        <li><a href="clothingsection.php">Clothing</a></li>
+        <li><a href="electronicsection.php">Electronics</a></li>
+        <!--<li><a href="shopsection.html">Sale</a></li>-->
+        <li><a href="cart.php"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+        <li><a href="MyAccount.php">My Account</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="shop-page">
+    <!-- Sidebar Filters -->
+    <aside class="filters">
+      <h3>Filters</h3>
+      <div class="filter-group">
+        <h4>Categories</h4>
+        <ul>
+          <li><active></active>All</li>
+          <li>Clothing</li>
+          <li>Electronics</li>
+          <li>Home & Living</li>
+          <li>Accessories</li>
+        </ul>
+      </div>
+      <div class="filter-group">
+        <h4>Price Range</h4>
+        <input type="range" min="20" max="200" />
+      </div>
+      <div class="filter-group">
+        <h4>Brand</h4>
+        <ul>
+          <li><active>Any Brand</li>
+          <li>Brand A</li>
+          <li>Brand B</li>
+          <li>Brand C</li>
+        </ul>
+      </div>
+      <div class="filter-group">
+        <h4>Ratings</h4>
+        <ul>
+          <li>★ & Up</li>
+          <li>★★ & Up</li>
+          <li>★★★ & Up</li>
+          <li><active>★★★★ & Up</li>
+        </ul>
+      </div>
+      <button class="apply-btn">Apply Filters</button>
+    </aside>
+
+    <!-- Main Content -->
+    <section class="products-section">
+      <!-- Banner -->
+      <div class="banner">
+        <h1>Spring Collection</h1>
+        <p>Refresh your wardrobe with the latest trends</p>
+        <button>Shop Now</button>
+      </div>
+
+      <!-- Product Grid -->
+      <h2>Shop All Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <h3>Sport Sneakers</h3>
+          <img src="sneakers.avif" />
+          <p>$89.99</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <h3>Wireless Headphones</h3>
+          <img src="headphones.avif" />
+          <p>$79.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <h3>Smartwatch</h3>
+          <img src="watch.jpg" />
+          <p>$149.99</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <h3>Casual Backpack</h3>
+          <img src="background.webp" />
+          <p>$54.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <h3>Digital Camera</h3>
+          <img src="camera.jpg" />
+          <p>$299.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <h3>Stylish Sunglasses</h3>
+          <img src="sunglasses.jpg" />
+          <p>$55.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <h3>Cozy Sweater</h3>
+          <img src="sweater.webp" />
+          <p>$45.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <h3>Fitness Tracker</h3>
+          <img src="tracker.webp" />
+          <p>$39.99</p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Featured Categories -->
+      <section class="featured">
+        <h2>Featured Categories</h2>
+        <div class="featured-grid">
+          <div class="featured-item">New Arrivals</div>
+          <div class="featured-item">Footwear</div>
+          <div class="featured-item">Gadgets</div>
+          <div class="featured-item">Home Decor</div>
+        </div>
+      </section>
+
+      <!-- Special Offer -->
+      <section class="offer">
+        <h2>Special Offer</h2>
+        <p>Up to 40% OFF on Selected Items</p>
+        <button>Shop Now</button>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
